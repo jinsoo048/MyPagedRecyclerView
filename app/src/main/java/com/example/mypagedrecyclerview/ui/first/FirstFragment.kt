@@ -21,12 +21,11 @@ class FirstFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //HomeService(this).tryGetCultureFirst()
         firstPagerAdapter = FirstPagerAdapter(this)
         viewPager = binding.firstVp
         viewPager.adapter = firstPagerAdapter
 
-        val tabName = arrayOf<String>("SUN", "Moon","Earth")
+        val tabName = arrayOf<String>("Camp", "Moon","Earth")
 
         TabLayoutMediator(binding.firstTab, binding.firstVp) { tab, position ->
             tab.text = tabName[position].toString()
@@ -36,11 +35,9 @@ class FirstFragment :
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 binding.firstVp.currentItem = tab !!.position
             }
-
             override fun onTabUnselected(tab: TabLayout.Tab?) {
                 Log.d("JJS", "onTabUnselected !!!!!!!!!!!!!!!!!")
             }
-
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 Log.d("JJS", "onTabReselected !!!!!!!!!!!!!!!!!")
             }

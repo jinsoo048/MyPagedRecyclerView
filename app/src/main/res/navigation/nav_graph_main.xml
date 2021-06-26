@@ -3,24 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/nav_first">
+    app:startDestination="@id/firstFragment">
 
     <fragment
-        android:id="@+id/nav_first"
+        android:id="@+id/firstFragment"
         android:name="com.example.mypagedrecyclerview.ui.first.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
 
     <fragment
-        android:id="@+id/nav_second"
+        android:id="@+id/secondFragment"
         android:name="com.example.mypagedrecyclerview.ui.second.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second"/>
+        tools:layout="@layout/fragment_second" />
 
     <fragment
-        android:id="@+id/nav_third"
+        android:id="@+id/thirdFragment"
         android:name="com.example.mypagedrecyclerview.ui.third.ThirdFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third"/>
+        tools:layout="@layout/fragment_third" />
+
 
 </navigation>
