@@ -21,7 +21,7 @@ class FirstFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        firstPagerAdapter = FirstPagerAdapter(this)
+        firstPagerAdapter = FirstPagerAdapter(fragmentManager,lifecycle)
         viewPager = binding.firstVp
         viewPager.adapter = firstPagerAdapter
 
