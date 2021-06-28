@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <drawable name="ic_1" />
-    <drawable name="ic_2" />
-    <drawable name="ic_3" />
     <drawable name="ic_first_24dp" />
     <drawable name="ic_second_24dp" />
     <drawable name="softsquared_logo" />
+    <drawable name="ic_menu_24dp" />
 </resources>

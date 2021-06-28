@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.first.CampFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.second.CampFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/campRv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_recycler_tour_camp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/campRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_recycler_second_camp" />
 
 </FrameLayout>

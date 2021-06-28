@@ -7,20 +7,20 @@
 
     <fragment
         android:id="@+id/nav_first"
-        android:name="com.example.mypagedrecyclerview.ui.first.FirstFragment"
-        android:label="fragment_first"
+        android:name="com.jiban.creativelearning.ui.first.FirstFragment"
+        android:label="창의야 체험가자!"
         tools:layout="@layout/fragment_first" />
 
     <fragment
         android:id="@+id/nav_second"
-        android:name="com.example.mypagedrecyclerview.ui.second.SecondFragment"
-        android:label="fragment_second"
+        android:name="com.jiban.creativelearning.ui.second.SecondFragment"
+        android:label="창의야 여행가자^^"
         tools:layout="@layout/fragment_second"/>
 
     <fragment
         android:id="@+id/nav_third"
-        android:name="com.example.mypagedrecyclerview.ui.third.ThirdFragment"
-        android:label="fragment_third"
+        android:name="com.jiban.creativelearning.ui.third.ThirdFragment"
+        android:label="창의야 함께걷자~"
         tools:layout="@layout/fragment_third"/>
 
 </navigation>

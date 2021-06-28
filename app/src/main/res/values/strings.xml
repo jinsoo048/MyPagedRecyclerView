@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">My Paged RecyclerView</string>
-    <string name="title_1" />
-    <string name="title_2" />
-    <string name="title_3" />
+    <string name="app_name">창의야 놀자</string>
+    <string name="title_1">체험학습</string>
+    <string name="title_2">여행캠프</string>
+    <string name="title_3">서울걷기</string>
     <string name="first" />
     <string name="content_description_first" />
     <string name="second" />
     <string name="content_description_second" />
     <string name="third" />
     <string name="content_description_third" />
+    <string name="page_title" />
 </resources>
