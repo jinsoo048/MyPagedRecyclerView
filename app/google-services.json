@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589894409775",
+    "project_id": "creativelearning-80da4",
+    "storage_bucket": "creativelearning-80da4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589894409775:android:645d552f374ad48b07f0da",
+        "android_client_info": {
+          "package_name": "com.jiban.creativelearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589894409775-d2kkfpt975hepineduiulchdlmes9540.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmMji8xwcy1j3Q9ML88A4UPT33Z5PVris"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589894409775-d2kkfpt975hepineduiulchdlmes9540.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
