@@ -33,7 +33,7 @@ class CampDataSource(
     }
 
     override fun getRefreshKey(state: PagingState<Int, Item>): Int? {
-        TODO("Not yet implemented")
+        return state.anchorPosition
     }
 
 }

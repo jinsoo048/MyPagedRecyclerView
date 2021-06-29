@@ -29,7 +29,7 @@ class CultureDataSource(
 
 
     override fun getRefreshKey(state: PagingState<Int, Row>): Int? {
-        TODO("Not yet implemented")
+        return state.anchorPosition
     }
 
 }
