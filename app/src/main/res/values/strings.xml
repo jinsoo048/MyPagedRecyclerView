@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">창의야 놀자</string>
+    <string name="app_name">통쾌한 자유방목 선언</string>
     <string name="title_1">체험학습</string>
     <string name="title_2">여행캠프</string>
     <string name="title_3">서울걷기</string>
@@ -10,4 +10,7 @@
     <string name="third" />
     <string name="content_description_third" />
     <string name="page_title" />
+    <string name="appbar_scrolling_view_behavior" translatable="false">
+        com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior
+    </string>
 </resources>

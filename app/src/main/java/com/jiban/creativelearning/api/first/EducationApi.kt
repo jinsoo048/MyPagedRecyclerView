@@ -11,13 +11,12 @@ import retrofit2.http.Path
 
 interface EducationApi {
 
-    @GET("{ServiceKey}/json/ListPublicReservationEducation/{pageNo}/{numOfRows}")
+    @GET("{serviceKey}/json/ListPublicReservationEducation/{startIndex}/{endIndex}")
     suspend fun getEducationData(
-        @Path("ServiceKey") ServiceKey: String = "76466d68766a6a733830667a784c49",
-        @Path("pageNo") pageNo: Int,
-        @Path("numOfRows") numOfRows: Int = 10,
+        @Path("serviceKey") ServiceKey: String = "76466d68766a6a733830667a784c49",
+        @Path("startIndex") startIndex: Int,
+        @Path("endIndex") endIndex: Int
     ): Education
-
 
     companion object {
 

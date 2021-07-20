@@ -10,13 +10,12 @@ import retrofit2.http.Path
 
 interface CultureApi {
 
-    @GET("{ServiceKey}/json/ListPublicReservationCulture/{pageNo}/{numOfRows}")
+    @GET("{serviceKey}/json/ListPublicReservationCulture/{startIndex}/{endIndex}")
     suspend fun getCultureData(
-        @Path("ServiceKey") ServiceKey: String = "6c566673796a6a733839664d4a624d",
-        @Path("pageNo") pageNo: Int,
-        @Path("numOfRows") numOfRows: Int = 10,
+        @Path("serviceKey") serviceKey: String = "6c566673796a6a733839664d4a624d",
+        @Path("startIndex") startIndex: Int,
+        @Path("endIndex") endIndex: Int
     ): PublicReservationCulture
-
 
     companion object {
 

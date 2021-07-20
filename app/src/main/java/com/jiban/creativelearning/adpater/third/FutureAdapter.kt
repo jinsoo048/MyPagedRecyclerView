@@ -14,7 +14,6 @@ import com.jiban.creativelearning.ui.third.FutureFragment
 class FutureAdapter(var context: FutureFragment, var cellClickListener: FutureFragment) :
     PagingDataAdapter<Row, FutureAdapter.FutureViewHolder>(FutureComparator) {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FutureViewHolder {
         return FutureViewHolder(
             ItemRecyclerThirdFutureBinding.inflate(
@@ -61,6 +60,4 @@ class FutureAdapter(var context: FutureFragment, var cellClickListener: FutureFr
             TODO("Not yet implemented")
         }
     }
-
-
 }

@@ -14,7 +14,6 @@ import com.jiban.creativelearning.ui.second.TravelFragment
 class TravelAdapter(var context: TravelFragment, var cellClickListener: TravelFragment) :
     PagingDataAdapter<Item, TravelAdapter.TravelViewHolder>(TravelComparator) {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TravelViewHolder {
         return TravelViewHolder(
             ItemRecyclerSecondTravelBinding.inflate(
@@ -60,6 +59,4 @@ class TravelAdapter(var context: TravelFragment, var cellClickListener: TravelFr
             return oldItem == newItem
         }
     }
-
-
 }

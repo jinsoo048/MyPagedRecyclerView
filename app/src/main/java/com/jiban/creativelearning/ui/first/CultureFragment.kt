@@ -12,15 +12,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.jiban.creativelearning.R
 import com.jiban.creativelearning.adpater.first.CampLoadStateAdapter
 import com.jiban.creativelearning.adpater.first.CultureAdapter
 import com.jiban.creativelearning.api.first.CultureApi
+import com.jiban.creativelearning.databinding.FragmentCultureBinding
 import com.jiban.creativelearning.model.first.culture.Row
 import com.jiban.creativelearning.viewmodels.first.CultureViewModel
 import com.jiban.creativelearning.viewmodels.first.CultureViewModelFactory
 import com.jiban.creativelearning.x.config.BaseFragment
-import com.jiban.creativelearning.R
-import com.jiban.creativelearning.databinding.FragmentCultureBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -35,6 +35,7 @@ class CultureFragment :
         super.onViewCreated(view, savedInstanceState)
 
         onGetCultureSuccess()
+
     }
 
     private fun onGetCultureSuccess() {
@@ -43,11 +44,9 @@ class CultureFragment :
         viewModel = ViewModelProvider(this, factory).get(CultureViewModel::class.java)
 
         val cultureAdapter = CultureAdapter(context = CultureFragment(), this)
-        //binding.cultureRv.layoutManager = LinearLayoutManager(requireContext())
+
         binding.cultureRv.layoutManager = GridLayoutManager(context, 2)
-
         binding.cultureRv.setHasFixedSize(true)
-
         binding.cultureRv.adapter = cultureAdapter.withLoadStateHeaderAndFooter(
             header = CampLoadStateAdapter { cultureAdapter.retry() },
             footer = CampLoadStateAdapter { cultureAdapter.retry() }
@@ -58,8 +57,6 @@ class CultureFragment :
                 cultureAdapter.submitData(pagedData)
             }
         }
-
-
     }
 
     override fun onAttach(context: Context) {
@@ -77,14 +74,11 @@ class CultureFragment :
                 Intent(Intent.ACTION_VIEW, Uri.parse(response.SVCURL)),
                 Bundle()
             )
-
         } else {
             Log.d(
                 "JJS",
                 "CultureFragment/onCellClickListenerCultureEvent: activity is null !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
             )
         }
-
-
     }
 }

@@ -20,7 +20,6 @@ interface CampApi {
         @Query("_type") _type: String = "json"
     ): Camp
 
-
     companion object {
 
         private const val BASE_URL = "http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/"

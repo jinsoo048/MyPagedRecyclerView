@@ -1,4 +1,4 @@
-package com.jiban.creativelearning.ui.first
+package com.jiban.creativelearning.utilities
 
 import android.view.View
 import android.widget.ImageView

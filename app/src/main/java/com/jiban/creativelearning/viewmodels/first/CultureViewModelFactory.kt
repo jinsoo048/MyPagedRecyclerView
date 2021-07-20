@@ -12,5 +12,4 @@ class CultureViewModelFactory(
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return CultureViewModel(api) as T
     }
-
 }

@@ -12,5 +12,4 @@ class CampViewModelFactory(
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return CampViewModel(api) as T
     }
-
 }

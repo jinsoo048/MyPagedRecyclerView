@@ -11,15 +11,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.jiban.creativelearning.R
 import com.jiban.creativelearning.adpater.first.CampLoadStateAdapter
 import com.jiban.creativelearning.adpater.third.LiveAdapter
 import com.jiban.creativelearning.api.third.LiveApi
+import com.jiban.creativelearning.databinding.FragmentLiveBinding
 import com.jiban.creativelearning.model.third.live.Row
 import com.jiban.creativelearning.viewmodels.third.LiveViewModel
 import com.jiban.creativelearning.viewmodels.third.LiveViewModelFactory
 import com.jiban.creativelearning.x.config.BaseFragment
-import com.jiban.creativelearning.R
-import com.jiban.creativelearning.databinding.FragmentLiveBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -70,6 +70,5 @@ class LiveFragment :
     fun onCellClickListenerLiveEvent(response: Row) {
         var mUrl = "https://www.bing.com/search?q=" + response.COURSE_NAME
         activity !!.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(mUrl)))
-
     }
 }

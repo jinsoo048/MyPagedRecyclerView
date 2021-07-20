@@ -69,5 +69,4 @@ class EducationAdapter(var context: EducationFragment, var cellClickListener: Ed
             return oldRow == newRow
         }
     }
-
 }

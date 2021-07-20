@@ -12,5 +12,4 @@ class LiveViewModelFactory(
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return LiveViewModel(api) as T
     }
-
 }

@@ -10,11 +10,11 @@ import retrofit2.http.Path
 
 interface FutureApi {
 
-    @GET("{ServiceKey}/json/futureCourseInfo/{pageNo}/{numOfRows}")
+    @GET("{ServiceKey}/json/futureCourseInfo/{startIndex}/{endIndex}")
     suspend fun getFutureData(
         @Path("ServiceKey") ServiceKey: String = "4c6f5066626a6a7334386e7757434c",
-        @Path("pageNo") pageNo: Int,
-        @Path("numOfRows") numOfRows: Int = 10,
+        @Path("startIndex") startIndex: Int,
+        @Path("endIndex") endIndex: Int
     ): Future
 
     companion object {

@@ -51,5 +51,4 @@ class CampAdapter(var context: CampFragment, var cellClickListener: CampFragment
             return oldItem == newItem
         }
     }
-
 }

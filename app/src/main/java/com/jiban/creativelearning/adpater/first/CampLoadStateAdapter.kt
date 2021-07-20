@@ -6,7 +6,7 @@ import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jiban.creativelearning.databinding.ItemLoadingStateBinding
-import com.jiban.creativelearning.ui.first.visible
+import com.jiban.creativelearning.utilities.visible
 
 class CampLoadStateAdapter(
     private val retry: () -> Unit
@@ -27,7 +27,6 @@ class CampLoadStateAdapter(
                 retry()
             }
         }
-
     }
 
     override fun onBindViewHolder(holder: CampLoadStateViewHolder, loadState: LoadState) {

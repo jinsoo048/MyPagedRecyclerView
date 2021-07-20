@@ -20,7 +20,6 @@ interface TravelApi {
         @Query("_type") _type: String = "json"
     ): Travel
 
-
     companion object {
 
         private const val BASE_URL = "http://api.visitkorea.or.kr/"

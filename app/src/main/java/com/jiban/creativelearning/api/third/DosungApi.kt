@@ -10,11 +10,11 @@ import retrofit2.http.Path
 
 interface DosungApi {
 
-    @GET("{ServiceKey}/json/walkDoseongInfo/{pageNo}/{numOfRows}")
+    @GET("{ServiceKey}/json/walkDoseongInfo/{startIndex}/{endIndex}")
     suspend fun getDosungData(
-    @Path("ServiceKey") ServiceKey: String = "41547274756a6a7335326d6f475450",
-    @Path("pageNo") pageNo: Int,
-    @Path("numOfRows") numOfRows: Int = 10,
+        @Path("ServiceKey") ServiceKey: String = "41547274756a6a7335326d6f475450",
+        @Path("startIndex") startIndex: Int,
+        @Path("endIndex") endIndex: Int
     ): Dosung
 
     companion object {

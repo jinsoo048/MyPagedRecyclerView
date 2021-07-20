@@ -12,5 +12,4 @@ class FutureViewModelFactory(
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return FutureViewModel(api) as T
     }
-
 }

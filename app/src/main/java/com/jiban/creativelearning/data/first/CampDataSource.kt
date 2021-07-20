@@ -21,7 +21,6 @@ class CampDataSource(
             val MobileOS = "ETC"
             val MobileApp = "AppTest"
 
-
             val response = api.getCampData(
                 ServiceKey,
                 nextPageNumber + 1,
@@ -43,5 +42,4 @@ class CampDataSource(
     override fun getRefreshKey(state: PagingState<Int, Item>): Int? {
         return state.anchorPosition
     }
-
 }

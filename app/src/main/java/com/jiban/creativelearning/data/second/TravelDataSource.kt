@@ -13,13 +13,11 @@ class TravelDataSource(
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Item> {
         return try {
             val nextPageNumber = params.key ?:0
-
             val ServiceKey = "oxkeiOH8uK8oW7g0PbEl5/1XxEPIdlvQtZnFkmMONh8qI3VCVBLjtyn0Q9LCS5ICwiC0oE9SmI7pEaH/2IzfDg=="
             val numOfRows = 10
             val _type = "json"
             val MobileOS = "ETC"
             val MobileApp = "AppTest"
-
 
             val response = api.getTravelData(ServiceKey,nextPageNumber+1,numOfRows,MobileOS,MobileApp,_type)
             LoadResult.Page(
@@ -35,5 +33,4 @@ class TravelDataSource(
     override fun getRefreshKey(state: PagingState<Int, Item>): Int? {
         return state.anchorPosition
     }
-
 }

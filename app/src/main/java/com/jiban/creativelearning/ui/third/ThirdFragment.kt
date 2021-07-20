@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.viewpager2.widget.ViewPager2
-import com.jiban.creativelearning.adpater.third.ThirdPagerAdapter
-import com.jiban.creativelearning.x.config.BaseFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.jiban.creativelearning.R
+import com.jiban.creativelearning.adpater.third.ThirdPagerAdapter
 import com.jiban.creativelearning.databinding.FragmentThirdBinding
+import com.jiban.creativelearning.x.config.BaseFragment
 
 class ThirdFragment :
     BaseFragment<FragmentThirdBinding>(FragmentThirdBinding::bind, R.layout.fragment_third) {
@@ -45,11 +45,8 @@ class ThirdFragment :
         })
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

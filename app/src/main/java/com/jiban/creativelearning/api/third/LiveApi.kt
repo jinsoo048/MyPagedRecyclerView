@@ -10,11 +10,11 @@ import retrofit2.http.Path
 
 interface LiveApi {
 
-    @GET("{ServiceKey}/json/walkSaengtaeInfo/{pageNo}/{numOfRows}")
+    @GET("{ServiceKey}/json/walkSaengtaeInfo/{startIndex}/{endIndex}")
     suspend fun getLiveData(
         @Path("ServiceKey") ServiceKey: String = "56655455636a6a73333449424d4853",
-        @Path("pageNo") pageNo: Int,
-        @Path("numOfRows") numOfRows: Int = 10,
+        @Path("startIndex") startIndex: Int,
+        @Path("endIndex") endIndex: Int
     ): Live
 
     companion object {

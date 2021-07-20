@@ -12,5 +12,4 @@ class DosungViewModelFactory(
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return DosungViewModel(api) as T
     }
-
 }

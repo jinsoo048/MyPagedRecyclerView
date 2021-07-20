@@ -13,23 +13,23 @@ class EducationDataSource(
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Row> {
         return try {
             val ServiceKey = "76466d68766a6a733830667a784c49"
-            val nextPageNumber = params.key ?:0
+            val nextPageNumber = params.key ?: 0
             val numOfRows = 10
+            val startIndex = (nextPageNumber * 10) + 1
+            val endIndex = (nextPageNumber * 10) + numOfRows
 
-            val response = api.getEducationData(ServiceKey,nextPageNumber+1,numOfRows)
+            val response = api.getEducationData(ServiceKey, startIndex, endIndex)
             LoadResult.Page(
                 data = response.ListPublicReservationEducation.row,
-                prevKey = if (nextPageNumber > 0) nextPageNumber -1 else null,
-                nextKey = if (nextPageNumber < response.ListPublicReservationEducation.list_total_count/10) nextPageNumber + 1 else null
+                prevKey = if (nextPageNumber > 0) nextPageNumber - 1 else null,
+                nextKey = if (nextPageNumber < response.ListPublicReservationEducation.list_total_count / 10) nextPageNumber + 1 else null
             )
         }catch (e: Exception){
             LoadResult.Error(e)
         }
     }
 
-
     override fun getRefreshKey(state: PagingState<Int, Row>): Int? {
         return state.anchorPosition
     }
-
 }

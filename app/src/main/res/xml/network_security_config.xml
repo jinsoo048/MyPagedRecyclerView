@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <base-config cleartextTrafficPermitted="true" />
-    <!--<base-config cleartextTrafficPermitted="false" />-->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">openAPI.seoul.go.kr</domain>
+        <domain includeSubdomains="true">api.visitkorea.or.kr</domain>
+        <domain includeSubdomains="true">futureheritage.seoul.go.kr</domain>
+        <domain includeSubdomains="true">tong.visitkorea.or.kr</domain>
+    </domain-config>
 </network-security-config>

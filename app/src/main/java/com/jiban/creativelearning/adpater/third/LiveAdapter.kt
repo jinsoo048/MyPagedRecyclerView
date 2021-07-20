@@ -13,7 +13,6 @@ import com.jiban.creativelearning.ui.third.LiveFragment
 class LiveAdapter(var context: LiveFragment, var cellClickListener: LiveFragment) :
     PagingDataAdapter<Row, LiveAdapter.LiveViewHolder>(LiveComparator) {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LiveViewHolder {
         return LiveViewHolder(
             ItemRecyclerThirdLiveBinding.inflate(
@@ -59,6 +58,4 @@ class LiveAdapter(var context: LiveFragment, var cellClickListener: LiveFragment
             TODO("Not yet implemented")
         }
     }
-
-
 }

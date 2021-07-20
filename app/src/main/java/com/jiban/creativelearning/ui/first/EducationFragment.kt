@@ -14,15 +14,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.coroutines.launch
 import com.jiban.creativelearning.adpater.first.CampLoadStateAdapter
 import com.jiban.creativelearning.adpater.first.EducationAdapter
 import com.jiban.creativelearning.api.first.EducationApi
+import com.jiban.creativelearning.databinding.FragmentEducationBinding
 import com.jiban.creativelearning.model.first.education.Row
 import com.jiban.creativelearning.viewmodels.first.EducationViewModel
 import com.jiban.creativelearning.viewmodels.first.EducationViewModelFactory
-import com.jiban.creativelearning.databinding.FragmentEducationBinding
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 
 class EducationFragment : Fragment() {
@@ -58,7 +58,6 @@ class EducationFragment : Fragment() {
                 educationAdapter.submitData(pagedData)
             }
         }
-
     }
 
     override fun onAttach(context: Context) {
@@ -76,15 +75,12 @@ class EducationFragment : Fragment() {
                 Intent(Intent.ACTION_VIEW, Uri.parse(response.SVCURL)),
                 Bundle()
             )
-
         } else {
             Log.d(
                 "JJS",
                 "EducationFragment/onCellClickListenerEducationEvent: activity is null !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
             )
         }
-
-
     }
     
 }

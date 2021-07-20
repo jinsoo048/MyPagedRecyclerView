@@ -11,15 +11,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.jiban.creativelearning.R
 import com.jiban.creativelearning.adpater.first.CampLoadStateAdapter
 import com.jiban.creativelearning.adpater.third.DosungAdapter
 import com.jiban.creativelearning.api.third.DosungApi
+import com.jiban.creativelearning.databinding.FragmentDosungBinding
 import com.jiban.creativelearning.model.third.dosung.Row
 import com.jiban.creativelearning.viewmodels.third.DosungViewModel
 import com.jiban.creativelearning.viewmodels.third.DosungViewModelFactory
 import com.jiban.creativelearning.x.config.BaseFragment
-import com.jiban.creativelearning.R
-import com.jiban.creativelearning.databinding.FragmentDosungBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -70,6 +70,5 @@ class DosungFragment :
     fun onCellClickListenerDosungEvent(response: Row) {
         var mUrl = "https://www.bing.com/search?q=" + response.COURSE_NAME
         activity !!.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(mUrl)))
-
     }
 }

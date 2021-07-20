@@ -13,7 +13,6 @@ import com.jiban.creativelearning.ui.third.DosungFragment
 class DosungAdapter(var context: DosungFragment, var cellClickListener: DosungFragment) :
     PagingDataAdapter<Row, DosungAdapter.DosungViewHolder>(DosungComparator) {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DosungViewHolder {
         return DosungViewHolder(
             ItemRecyclerThirdDosungBinding.inflate(
@@ -58,6 +57,4 @@ class DosungAdapter(var context: DosungFragment, var cellClickListener: DosungFr
             TODO("Not yet implemented")
         }
     }
-
-
 }
